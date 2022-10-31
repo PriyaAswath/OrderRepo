@@ -44,27 +44,29 @@ namespace ProductsCSVImportDemo
             Console.ReadLine();
         }
 
-     ////   public void readcsvparsing()
-     //   {
-     //       string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\Kanmani Priya\Desktop\CSV-Import-to-Database-Csharp-master\CSV-Import-to-Database-Csharp-master\order.csv");
+        public void readcsvparsing()
+        {
+            string[] csvLines = System.IO.File.ReadAllLines(@"C:\Users\Kanmani Priya\Desktop\CSV-Import-to-Database-Csharp-master\CSV-Import-to-Database-Csharp-master\order.csv");
 
-     //       // Create lists with the CSV data
-     //       var OrderID = new List<int>();
-     //       var OrderName = new List<string>();
-     //       var OrderDetails = new List<string>();
+        // Create lists with the CSV data
+        var OrderID = new List<int>();
+        var OrderName = new List<string>();
+        var OrderDetails = new List<string>();
 
-     //       // Split each row into column data
-     //       for (int i = 1; i < csvLines.Length; i++)
-     //       {
-     //           string[] rowData = csvLines[i].Split(',');
+            // Split each row into column data
+            for (int i = 1; i<csvLines.Length; i++)
+            {
+                string[] rowData = csvLines[i].Split(',');
 
-     //           int id = int.Parse(rowData[0]);
-     //           OrderID.Add(id);
-     //           OrderName.Add(rowData[1]);
-     //           OrderDetails.Add(rowData[2]);
-     //       }
-     //       Console.ReadKey();
-     //   }
+        int id = int.Parse(rowData[0]);
+        OrderID.Add(id);
+                OrderName.Add(rowData[1]);
+                OrderDetails.Add(rowData[2]);
+            }
+    Console.ReadKey();
+        }
+
+        // Branch 1 has this line
        
     }
 }
